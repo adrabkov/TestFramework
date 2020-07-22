@@ -1,9 +1,7 @@
-﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using OpenQA.Selenium;
 
-namespace Vk.TestFramework.Driver
+namespace CAD.CD.Search.TestFramework.Driver
 {
     public class DriverWaiters
     {

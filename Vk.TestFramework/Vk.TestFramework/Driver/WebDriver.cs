@@ -1,18 +1,16 @@
-﻿using OpenQA.Selenium;
+﻿using CAD.CD.Search.TestFramework.Config;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Text;
-using Vk.TestFramework.Config;
 using WebDriverManager.DriverConfigs.Impl;
 
-namespace Vk.TestFramework.Driver
+namespace CAD.CD.Search.TestFramework.Driver
 {
     public class WebDriver
     {
@@ -49,7 +47,6 @@ namespace Vk.TestFramework.Driver
         {
             string remoteAddressConfigSetting = null;
             string browserName = ConfigLoader.LoadJson("testConfig")["BrowserName"];
-            //string currentEnvironment = ConfigLoader.LoadJson("testConfig")["Current_Environment"];
             string testRemotelyConfigSetting = ConfigLoader.LoadJson("testConfig")["TestRemotely"];
             var testRemotely = testRemotelyConfigSetting == null ? false : Boolean.Parse(testRemotelyConfigSetting);
             var dirPath = Assembly.GetExecutingAssembly().Location;
@@ -66,7 +63,8 @@ namespace Vk.TestFramework.Driver
                     }
                     else
                     {
-                        return new ChromeDriver(ChromeDriverService.CreateDefaultService(dirPath + "/Resources/Drivers"), chromeOptions, TimeSpan.FromMinutes(5));
+                        new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
+                        return new ChromeDriver();
                     }
 
                 case "Firefox":
@@ -77,18 +75,8 @@ namespace Vk.TestFramework.Driver
                     }
                     else
                     {
-                        return new FirefoxDriver(FirefoxDriverService.CreateDefaultService(dirPath + "/Resources/Drivers"), firefoxOptions, TimeSpan.FromMinutes(5));
-                    }
-
-                case "IE":
-                    InternetExplorerOptions ieOptions = new InternetExplorerOptions();
-                    if (testRemotely)
-                    {
-                        return new RemoteWebDriver(new Uri(remoteAddressConfigSetting), ieOptions.ToCapabilities(), TimeSpan.FromMinutes(5));
-                    }
-                    else
-                    {
-                        return new InternetExplorerDriver(InternetExplorerDriverService.CreateDefaultService(dirPath + "/Resources/Drivers"), ieOptions, TimeSpan.FromMinutes(5));
+                        new WebDriverManager.DriverManager().SetUpDriver(new FirefoxConfig());
+                        return new FirefoxDriver();
                     }
 
                 default:

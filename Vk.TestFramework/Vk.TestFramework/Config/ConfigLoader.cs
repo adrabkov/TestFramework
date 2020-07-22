@@ -1,11 +1,8 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Text;
 
-namespace Vk.TestFramework.Config
+namespace CAD.CD.Search.TestFramework.Config
 {
     class ConfigLoader
     {

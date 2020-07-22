@@ -1,10 +1,14 @@
-﻿using OpenQA.Selenium.Interactions;
+﻿using CAD.CD.Search.TestFramework.Config;
+using CAD.CD.Search.TestFramework.Driver;
+using NLog;
+using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using Vk.TestFramework.Driver;
+using System.Threading;
 
-namespace Vk.TestFramework.PageObjects
+namespace CAD.CD.Search.TestFramework.PageObjects
 {
     public class BasePage
     {
@@ -21,6 +25,28 @@ namespace Vk.TestFramework.PageObjects
             this.driver = driver;
             driverWaiters = new DriverWaiters();
             driverActions = new Actions(driver.Current);
+        }
+
+        protected void cleareInputField(IWebElement textfield)
+        {
+            textfield.SendKeys(Keys.Control + "a" + Keys.Delete);
+
+        }
+
+        protected void SetImplisitWait(int seconds)
+        {
+            driver.Current.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(seconds);
+        }
+
+        protected void ResetImplisitWait()
+        {
+            int ImplicitWaitTimeout = ConfigLoader.LoadJson("testConfig").implicitWaitTimeout;
+            driver.Current.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(ImplicitWaitTimeout);
+        }
+
+        protected void ClickByElementCoordinates(IWebElement element)
+        {
+            driverActions.MoveToElement(element).MoveByOffset(0, 0).Click().Perform();
         }
     }
 }

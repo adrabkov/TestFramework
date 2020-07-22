@@ -1,8 +1,8 @@
 {
-  "implicitWaitTimeout": 10,
+  "implicitWaitTimeout": 5,
   "Current_Environment": "Stage",
   "BrowserName": "Chrome",
-  "TestRemotely": "False",
+  "TestRemotely": "false",
   "TestHeadless": "False",
 
   "Docker": {

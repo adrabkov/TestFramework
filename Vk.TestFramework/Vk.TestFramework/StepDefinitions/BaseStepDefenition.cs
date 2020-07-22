@@ -1,16 +1,17 @@
-﻿using TechTalk.SpecFlow;
-using Vk.TestFramework.Driver;
-using Vk.TestFramework.PageObjects;
-using Vk.TestFramework.Utils;
+﻿using CAD.CD.Search.TestFramework.Driver;
+using CAD.CD.Search.TestFramework.PageObjects;
+using CAD.CD.Search.TestFramework.Utils;
+using TechTalk.SpecFlow;
+using Vk.TestFramework.PageObjects.Pages;
 
-namespace Vk.TestFramework.StepDefinitions
+namespace CAD.CD.Search.TestFramework.StepDefinitions
 {
     [Binding]
     public class BaseStepDefenition
     {
         protected LoginPage loginPage;
 
-        protected HomePage homePage;
+        protected StartPage startPage;
 
         protected TestDataGenerator testDataGenerator;
 
@@ -18,7 +19,7 @@ namespace Vk.TestFramework.StepDefinitions
         {
             WebDriver driver = scenarioContext.Get<WebDriver>();
             loginPage = new LoginPage(driver);
-            homePage = new HomePage(driver);
+            startPage = new StartPage(driver);
             testDataGenerator = new TestDataGenerator();
         }
     }

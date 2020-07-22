@@ -1,13 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CAD.CD.Search.TestFramework.Config;
+using CAD.CD.Search.TestFramework.Driver;
+using System;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
-using Vk.TestFramework.Config;
-using Vk.TestFramework.Driver;
+using NLog;
+using CAD.CD.Search.TestFramework.Api;
 
-namespace Vk.TestFramework.Hooks
+[assembly: Parallelizable(ParallelScope.Fixtures)]
+[assembly: LevelOfParallelism(3)]
+namespace CAD.CD.Search.TestFramework.Hooks
 {
-    public sealed class BeforeAfter
+    [Binding]
+    public sealed class BeforeAfter : ListingApi
     {
         public int ImplicitWaitTimeout => ConfigLoader.LoadJson("testConfig").implicitWaitTimeout;
 
@@ -19,13 +23,13 @@ namespace Vk.TestFramework.Hooks
 
         private readonly ScenarioContext scenarioContext;
 
-        //private readonly ListingApi listingApi = new ListingApi();
+        private readonly ListingApi listingApi = new ListingApi();
 
         public BeforeAfter(ScenarioContext scenarioContext)
         {
             this.scenarioContext = scenarioContext;
         }
-
+        
         [BeforeScenario]
         public void BeforeScenario()
         {
