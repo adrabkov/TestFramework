@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[106.11.4, )"
             },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[3.141.0, )"
+            },
             "SpecFlow": {
               "target": "Package",
               "version": "[3.3.30, )"
@@ -61,6 +65,10 @@
             "SpecFlow.Tools.MsBuild.Generation": {
               "target": "Package",
               "version": "[3.3.30, )"
+            },
+            "WebDriverManager": {
+              "target": "Package",
+              "version": "[2.9.2, )"
             },
             "nunit": {
               "target": "Package",

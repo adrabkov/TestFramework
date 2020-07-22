@@ -102,3 +102,13 @@ F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\bin\Debug\netcorea
 F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\bin\Debug\netcoreapp3.1\Utf8Json.dll
 F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
+F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\bin\Debug\netcoreapp3.1\testhost.exe
+F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\bin\Debug\netcoreapp3.1\nunit.engine.core.dll
+F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\bin\Debug\netcoreapp3.1\WebDriver.dll
+F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\bin\Debug\netcoreapp3.1\Vk.TestFramework.pdb
+F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\bin\Debug\netcoreapp3.1\AngleSharp.dll
+F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\bin\Debug\netcoreapp3.1\ICSharpCode.SharpZipLib.dll
+F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\bin\Debug\netcoreapp3.1\WebDriverManager.dll
+F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\obj\Debug\netcoreapp3.1\Vk.TestFramework.csproj.CoreCompileInputs.cache
+F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\obj\Debug\netcoreapp3.1\Vk.TestFramework.dll
+F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\obj\Debug\netcoreapp3.1\Vk.TestFramework.pdb
