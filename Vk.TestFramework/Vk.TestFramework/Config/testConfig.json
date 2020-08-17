@@ -1,5 +1,5 @@
 {
-  "implicitWaitTimeout": 5,
+  "implicitWaitTimeout": 10,
   "Current_Environment": "Stage",
   "BrowserName": "Chrome",
   "TestRemotely": "false",

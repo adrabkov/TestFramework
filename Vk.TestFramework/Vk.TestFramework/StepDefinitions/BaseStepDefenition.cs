@@ -11,7 +11,7 @@ namespace CAD.CD.Search.TestFramework.StepDefinitions
     {
         protected LoginPage loginPage;
 
-        protected StartPage startPage;
+        protected FeedPage startPage;
 
         protected TestDataGenerator testDataGenerator;
 
@@ -19,7 +19,7 @@ namespace CAD.CD.Search.TestFramework.StepDefinitions
         {
             WebDriver driver = scenarioContext.Get<WebDriver>();
             loginPage = new LoginPage(driver);
-            startPage = new StartPage(driver);
+            startPage = new FeedPage(driver);
             testDataGenerator = new TestDataGenerator();
         }
     }

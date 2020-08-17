@@ -2,12 +2,9 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.IO;
-using System.Reflection;
 using WebDriverManager.DriverConfigs.Impl;
 
 namespace CAD.CD.Search.TestFramework.Driver
@@ -30,7 +27,6 @@ namespace CAD.CD.Search.TestFramework.Driver
             }
         }
 
-
         public WebDriverWait Wait
         {
             get
@@ -49,8 +45,6 @@ namespace CAD.CD.Search.TestFramework.Driver
             string browserName = ConfigLoader.LoadJson("testConfig")["BrowserName"];
             string testRemotelyConfigSetting = ConfigLoader.LoadJson("testConfig")["TestRemotely"];
             var testRemotely = testRemotelyConfigSetting == null ? false : Boolean.Parse(testRemotelyConfigSetting);
-            var dirPath = Assembly.GetExecutingAssembly().Location;
-            dirPath = Path.GetDirectoryName(dirPath);
 
             switch (browserName)
             {

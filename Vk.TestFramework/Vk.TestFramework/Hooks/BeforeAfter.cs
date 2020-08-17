@@ -11,7 +11,7 @@ using CAD.CD.Search.TestFramework.Api;
 namespace CAD.CD.Search.TestFramework.Hooks
 {
     [Binding]
-    public sealed class BeforeAfter : ListingApi
+    public sealed class BeforeAfter
     {
         public int ImplicitWaitTimeout => ConfigLoader.LoadJson("testConfig").implicitWaitTimeout;
 
@@ -22,8 +22,6 @@ namespace CAD.CD.Search.TestFramework.Hooks
         public string SearchWebURL => ConfigLoader.LoadJson("testConfig")[currentEnvironment]["Search_Web"]["URL"];
 
         private readonly ScenarioContext scenarioContext;
-
-        private readonly ListingApi listingApi = new ListingApi();
 
         public BeforeAfter(ScenarioContext scenarioContext)
         {

@@ -20,24 +20,24 @@ namespace Vk.TestFramework.Features.StartPage
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.3.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Search button")]
-    public partial class SearchButtonFeature
+    [NUnit.Framework.DescriptionAttribute("Log Out from the application")]
+    public partial class LogOutFromTheApplicationFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "SearchButton.feature"
+#line 1 "LogOutFromTheApp.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Search button", "    In order to avoid bugs connected with search button\r\n    As a carrier,\r\n    I" +
-                    " want to click on the Search button on the Central Dispatch Search App\r\n    So t" +
-                    "hat I can begin a new search and/or access my recent search history ", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Log Out from the application", "    In order to avoid bugs connected with Log Out from the application\r\n    As a " +
+                    "client,\r\n    I want to click log out button and successfully log out from the ap" +
+                    "plication ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,17 +76,13 @@ namespace Vk.TestFramework.Features.StartPage
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Search button Functional")]
-        [NUnit.Framework.CategoryAttribute("Pilot")]
-        [NUnit.Framework.CategoryAttribute("StartPage")]
-        public virtual void SearchButtonFunctional()
+        [NUnit.Framework.DescriptionAttribute("Log Out from the application")]
+        public virtual void LogOutFromTheApplication()
         {
-            string[] tagsOfScenario = new string[] {
-                    "Pilot",
-                    "StartPage"};
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search button Functional", null, tagsOfScenario, argumentsOfScenario);
-#line 8
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Log Out from the application", null, tagsOfScenario, argumentsOfScenario);
+#line 6
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -106,8 +102,17 @@ namespace Vk.TestFramework.Features.StartPage
             else
             {
                 this.ScenarioStart();
-#line 9
+#line 7
         testRunner.Given("I have login into application using test credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 8
+        testRunner.Then("I verify that the user has successfully log in to the app", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 9
+        testRunner.When("I click top profile menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 10
+        testRunner.And("I click log out button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
