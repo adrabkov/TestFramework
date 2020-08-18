@@ -1,5 +1,6 @@
 ﻿using CAD.CD.Search.TestFramework.Driver;
 using CAD.CD.Search.TestFramework.PageObjects.PageElements;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using System.Threading;
 
@@ -31,8 +32,13 @@ namespace CAD.CD.Search.TestFramework.PageObjects
         public void ClickSignInButton()
         {
             signInButton.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(500);
             //logger.Info("User has clicked sign in button at login page");
+        }
+
+        public void VerifyThatSignInButtonDisplayed()
+        {
+            Assert.IsTrue(signInButton.GetElement().Displayed);
         }
     }
 }

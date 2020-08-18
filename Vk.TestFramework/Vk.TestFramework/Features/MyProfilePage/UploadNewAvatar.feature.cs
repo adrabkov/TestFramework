@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Vk.TestFramework.Features.StartPage
+namespace Vk.TestFramework.Features.MyProfilePage
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,24 +20,23 @@ namespace Vk.TestFramework.Features.StartPage
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.3.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Log Out from the application")]
-    public partial class LogOutFromTheApplicationFeature
+    [NUnit.Framework.DescriptionAttribute("Upload a new avatar")]
+    public partial class UploadANewAvatarFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "LogOutFromTheApp.feature"
+#line 1 "UploadNewAvatar.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Log Out from the application", "    In order to avoid bugs connected with Log Out from the application\r\n    As a " +
-                    "client,\r\n    I want to click log out button and successfully log out from the ap" +
-                    "plication ", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Upload a new avatar", "    In order to avoid bugs connected with upload a new avatar\r\n    As a client,\r\n" +
+                    "    I want to upload a new avatar for my profile ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,12 +75,12 @@ namespace Vk.TestFramework.Features.StartPage
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Log Out from the application")]
-        public virtual void LogOutFromTheApplication()
+        [NUnit.Framework.DescriptionAttribute("Upload a new avatar")]
+        public virtual void UploadANewAvatar()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Log Out from the application", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Upload a new avatar", null, tagsOfScenario, argumentsOfScenario);
 #line 6
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -109,10 +108,25 @@ namespace Vk.TestFramework.Features.StartPage
         testRunner.Then("I verify that the user has successfully log in to the app", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 9
-        testRunner.When("I click top profile menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.When("I click My profile menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 10
-        testRunner.And("I click log out button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.When("I click upload a profile photo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 11
+        testRunner.And("I upload a new photo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 12
+        testRunner.Then("I verify that owner photo is display", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 13
+        testRunner.When("I click Save and continue button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 14
+        testRunner.And("I click Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 15
+        testRunner.Then("I verify that avatar is display", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

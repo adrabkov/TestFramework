@@ -7,6 +7,7 @@ using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using Vk.TestFramework.Utils;
 
 namespace CAD.CD.Search.TestFramework.PageObjects
 {
@@ -19,6 +20,8 @@ namespace CAD.CD.Search.TestFramework.PageObjects
         protected DriverWaiters driverWaiters;
 
         protected Actions driverActions;
+
+        protected CommonUtilities commonUtilities;
 
         public BasePage(WebDriver driver)
         {

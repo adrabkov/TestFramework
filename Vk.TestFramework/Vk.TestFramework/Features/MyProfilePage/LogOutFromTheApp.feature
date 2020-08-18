@@ -8,3 +8,4 @@
         Then I verify that the user has successfully log in to the app
         When I click top profile menu
         And I click log out button
+        Then I verify that login page is open

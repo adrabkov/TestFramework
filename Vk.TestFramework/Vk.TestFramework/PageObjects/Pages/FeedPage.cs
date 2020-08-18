@@ -12,9 +12,11 @@ namespace Vk.TestFramework.PageObjects.Pages
         public FeedPage(WebDriver driver) : base(driver)
         {
             MyProfile = new MyProfilePage(driver);
+            CommonPage = new CommonPage(driver);
         }
 
         public MyProfilePage MyProfile { get; }
+        public CommonPage CommonPage { get; }
 
         private WebElement userNameInput => new WebElement(driver, SearchStrategies.Id, "index_email");
 

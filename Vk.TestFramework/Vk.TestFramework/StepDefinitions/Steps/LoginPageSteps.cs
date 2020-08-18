@@ -19,5 +19,10 @@ namespace Vk.TestFramework.StepDefinitions.Steps
             loginPage.TypeInPasswordInput(Convert.ToString(testCreds.password));
             loginPage.ClickSignInButton();
         }
+        [Then(@"I verify that login page is open")]
+        public void IVerifyThatLoginPageIsOpen()
+        {
+            loginPage.VerifyThatSignInButtonDisplayed();
+        }
     }
 }
