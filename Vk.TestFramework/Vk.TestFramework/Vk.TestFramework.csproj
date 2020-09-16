@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\LoginPage\SearchButton.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\MyProfilePage\LogInToTheApp.feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="NLog.Extensions.Logging" Version="1.6.4" />
     <PackageReference Include="NLog.Web.AspNetCore" Version="4.9.2" />
     <PackageReference Include="nunit" Version="3.12.0" />
@@ -27,6 +32,36 @@
     <None Update="Config\testCreds.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="test.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\LoginPage\LogInToTheApp.feature.cs">
+      <DependentUpon>LogInToTheApp.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\MyProfilePage\UploadNewAvatar.feature.cs">
+      <DependentUpon>UploadNewAvatar.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\MyProfilePage\LogOutFromTheApp.feature.cs">
+      <DependentUpon>LogOutFromTheApp.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\LoginPage\LogInToTheApp.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\MyProfilePage\UploadNewAvatar.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\MyProfilePage\LogOutFromTheApp.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
   </ItemGroup>
 
 </Project>

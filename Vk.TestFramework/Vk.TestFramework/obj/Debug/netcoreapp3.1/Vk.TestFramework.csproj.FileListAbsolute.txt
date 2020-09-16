@@ -116,3 +116,4 @@ F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\obj\Debug\netcorea
 F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\obj\Debug\netcoreapp3.1\Vk.TestFramework.pdb
 F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\bin\Debug\netcoreapp3.1\Config\testConfig.json
 F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\bin\Debug\netcoreapp3.1\Config\testCreds.json
+F:\Project\C#\TestFramework\Vk.TestFramework\Vk.TestFramework\bin\Debug\netcoreapp3.1\test.jpg

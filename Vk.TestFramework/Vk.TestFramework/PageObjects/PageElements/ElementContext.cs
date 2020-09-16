@@ -44,6 +44,11 @@ namespace CAD.CD.Search.TestFramework.PageObjects.PageElements
             elementInteracting.SendKeys(text);
         }
 
+        public void HoverToElement()
+        {
+            elementInteracting.HoverToElement();
+        }
+
         public void ClickUsingJS()
         {
             elementInteracting.ClickUsingJS();

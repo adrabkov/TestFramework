@@ -63,5 +63,11 @@ namespace Vk.TestFramework.StepDefinitions.Steps
         {
             startPage.MyProfile.VerifyUploadedAvatarIsDisplay();
         }
+
+        [Then(@"I delete avatar")]
+        public void ThenIDeleteAvatar()
+        {
+            startPage.MyProfile.DeleteAvatar();
+        }
     }
 }

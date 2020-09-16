@@ -43,6 +43,10 @@ namespace CAD.CD.Search.TestFramework.PageObjects.PageElements.ElementResources
             webElement.GetElement().SendKeys(text);
         }
 
+        public void HoverToElement()
+        {
+            actions.MoveToElement(webElement.GetElement());
+        }
 
     }
 }

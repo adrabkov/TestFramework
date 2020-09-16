@@ -5,6 +5,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using Vk.TestFramework.Utils;
 
 namespace Vk.TestFramework.PageObjects.Pages
@@ -20,9 +21,13 @@ namespace Vk.TestFramework.PageObjects.Pages
         private WebElement uploadProfilePhotoLink => new WebElement(driver, SearchStrategies.Id, "page_load_photo");
         private WebElement pageAvatar => new WebElement(driver, SearchStrategies.Id, "page_avatar");
         private WebElement ownerPhoto => new WebElement(driver, SearchStrategies.Id, "owner_photo_img");
+        private WebElement descriptionPhoto => new WebElement(driver, SearchStrategies.ByXPath, "//div[@id='owner_photo_edit']//div[@class='owner_photo_desc']");
         private WebElement saveAndContinueButton => new WebElement(driver, SearchStrategies.Id, "owner_photo_done_edit");
         private WebElement savePhotoButton => new WebElement(driver, SearchStrategies.Id, "owner_photo_done");
-        private WebElement pageAvatarWithImg => new WebElement(driver, SearchStrategies.ByXPath, "//img[@class='page_avatar_img']");
+        private WebElement pageAvatarWithImg => new WebElement(driver, SearchStrategies.ByXPath, "//img[@class='page_avatar_img'][contains(@src, 'https://')]");
+        private WebElement deleteAvatar => new WebElement(driver, SearchStrategies.ByXPath, "//div[@data-title='Delete photo']");
+        private WebElement warningWindow => new WebElement(driver, SearchStrategies.ByXPath, "//div[@class='profile_photo_prev']");
+        private WebElement confirmDeleteButton => new WebElement(driver, SearchStrategies.ByXPath, "//button[@class='flat_button']");
 
         public void VerifythatUserSuccessfullyLogIn()
         {
@@ -52,8 +57,23 @@ namespace Vk.TestFramework.PageObjects.Pages
             Assert.IsTrue(ownerPhoto.GetElement().Displayed);
         }
 
-        public void ClickSaveAndContinueButton() => saveAndContinueButton.Click();
+        public void ClickSaveAndContinueButton()
+        {
+            Thread.Sleep(500);
+            descriptionPhoto.WaitElementIsVisible();
+            saveAndContinueButton.Click();
+        }
+
         public void ClickSaveButton() => savePhotoButton.Click();
         public void VerifyUploadedAvatarIsDisplay() => Assert.IsTrue(pageAvatarWithImg.GetElement().Displayed);
+
+        public void DeleteAvatar()
+        {
+            pageAvatar.HoverToElement();
+            deleteAvatar.Click();
+            warningWindow.WaitElementIsVisible();
+            confirmDeleteButton.Click();
+            Thread.Sleep(1000);
+        }
     }
 }

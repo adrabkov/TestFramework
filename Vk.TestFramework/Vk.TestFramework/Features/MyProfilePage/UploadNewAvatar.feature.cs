@@ -128,6 +128,9 @@ namespace Vk.TestFramework.Features.MyProfilePage
 #line 15
         testRunner.Then("I verify that avatar is display", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+#line 16
+        testRunner.And("I delete avatar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

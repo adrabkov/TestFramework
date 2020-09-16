@@ -13,3 +13,4 @@
         When I click Save and continue button
         And I click Save button
         Then I verify that avatar is display
+        And I delete avatar
